@@ -19,9 +19,7 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix'=>'v1'],function(){
 
-Route::apiResource('meeting','MeetingController',[
-	'except'=>['edit','create']
-]);
+Route::apiResource('meeting','MeetingController');
 
 Route::apiResource('meeting/registration','RegistrationController',[
  'only'=>['store','destroy']
